@@ -3,6 +3,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Mood from "./pages/Mood.jsx";
 import Chat from "./pages/Chat.jsx";
 import Login from "./pages/Login.jsx";
+import Graph from "./pages/Graph.jsx";
 import Navbar from "./components/Navbar.jsx";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         {page === "mood" && <Mood />}
         {page === "chat" && <Chat />}
         {page === "login" && <Login />}
+        {page === "graph" && <Graph />}
       </div>
 
       <Navbar setPage={setPage} />

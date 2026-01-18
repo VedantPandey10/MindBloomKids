@@ -68,12 +68,19 @@ h3 {
 .nav {
   display:flex;
   justify-content:space-around;
-  background:#020617;
-  padding:12px 0;
+  padding:14px 0;
+  background: linear-gradient(90deg,#FF5252,#F48FB1);
 }
 
 .nav div {
-  color:#7CFF9B;
+  color:white;
   font-weight:bold;
   cursor:pointer;
+  transition:.2s;
+  font-size:18px;
+}
+
+.nav div:hover {
+  transform: scale(1.2);
+  color:#FFD54F;
 }

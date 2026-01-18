@@ -12,20 +12,46 @@ export default function Chat() {
     setMsg("");
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  };
+
   return (
     <>
       <h3>🤖 AI Assistant</h3>
 
-      <div style={{ display: "flex", gap: "10px" }}>
-        <input
-          value={msg}
-          onChange={(e) => setMsg(e.target.value)}
-          placeholder="Ask something..."
-        />
-        <button onClick={send}>Ask</button>
-      </div>
+      <div className="chat-sticker-container">
+        <div className="robot-sticker">
+          <div className="sticker robot sticker-robot">🤖</div>
+        </div>
 
-      {reply && <div className="card chat-box">{reply}</div>}
+        <div className="chat-content">
+          <div className="chat-box-square">
+            {reply && <div className="ai-reply">{reply}</div>}
+            {!reply && <div className="ai-placeholder">Waiting for your question...</div>}
+
+            <div className="chat-input-section">
+              <input
+                value={msg}
+                onChange={(e) => setMsg(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Ask something..."
+                className="chat-input"
+              />
+              <button onClick={send} className="chat-send-button">Ask ➤</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="animated-stickers-right">
+          <div className="sticker sticker-4">👧</div>
+          <div className="sticker sticker-5">🧒</div>
+          <div className="sticker sticker-6">👦</div>
+        </div>
+      </div>
     </>
   );
 }
