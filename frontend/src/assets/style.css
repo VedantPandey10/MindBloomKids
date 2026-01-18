@@ -1,0 +1,79 @@
+body {
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  font-family: "Segoe UI", Arial;
+  display:flex;
+  justify-content:center;
+}
+
+.app {
+  width:360px;
+  background:#111827;
+  min-height:100vh;
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(0,255,150,0.3);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.header {
+  background:linear-gradient(to right,#00e676,#00c853);
+  color:#022;
+  padding:16px;
+  text-align:center;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.content {
+  flex:1;
+  padding:10px;
+}
+
+.card {
+  background:#1f2933;
+  padding:14px;
+  border-radius:14px;
+  margin:10px;
+  color:#e5e7eb;
+  box-shadow:0 0 12px rgba(0,255,150,0.25);
+}
+
+button {
+  width:90%;
+  margin:10px;
+  padding:12px;
+  background:linear-gradient(to right,#00e676,#00c853);
+  border:none;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+select,input {
+  width:90%;
+  margin:10px;
+  padding:10px;
+  border-radius:10px;
+  background:#111827;
+  color:white;
+  border:none;
+}
+
+h3 {
+  text-align:center;
+  color:#7CFF9B;
+}
+
+.nav {
+  display:flex;
+  justify-content:space-around;
+  background:#020617;
+  padding:12px 0;
+}
+
+.nav div {
+  color:#7CFF9B;
+  font-weight:bold;
+  cursor:pointer;
+}
